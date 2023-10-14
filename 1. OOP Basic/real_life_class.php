@@ -1,28 +1,29 @@
 <?php
+/* Writing a real life useful class */
 class RGB {
     private $color;
     private $red;
     private $green;
     private $blue;
 
-    public function __construct( $colorCode = '' ) {
+    function __construct( $colorCode = '' ) {
         $this->color = ltrim( $colorCode, "#" );
         $this->parseColor();
     }
 
-    public function getColor() {
+    function getColor() {
         return $this->color;
     }
 
-    public function getRGBColor() {
+    function getRGBColor() {
         return array( $this->red, $this->green, $this->blue );
     }
 
-    public function readRGBColor() {
+    function readRGBColor() {
         echo "Red = {$this->red}\nGreen = {$this->green}\nBlue = {$this->blue}";
     }
 
-    public function setColor( $colorCode ) {
+    function setColor( $colorCode ) {
         $this->color = ltrim( $colorCode, "#" );
         $this->parseColor();
     }
@@ -48,5 +49,5 @@ class RGB {
     }
 }
 
-$myColor = new RGB( "" );
+$myColor = new RGB( "#ffef27" );
 $myColor->readRGBColor();

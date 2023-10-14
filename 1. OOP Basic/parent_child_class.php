@@ -1,5 +1,4 @@
 <?php
-//Parent Child Class Scope
 class ParentClass {
     protected $name;
     function __construct( $name ) {
@@ -19,4 +18,4 @@ class ChildClass extends ParentClass {
     }
 }
 
-$cc = new ChildClass( "ABCD" );
+$childClass = new ChildClass( "ABCD" );

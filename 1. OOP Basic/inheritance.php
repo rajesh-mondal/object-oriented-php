@@ -1,7 +1,6 @@
 <?php
 class Animal {
     protected $name;
-
     public function __construct( $name ) {
         $this->name = $name;
     }
@@ -18,7 +17,7 @@ class Animal {
         echo "{$this->name} is sleeping\n";
     }
 
-    public function greet() {}
+    public function greet() {} // override
 
     protected function addTitle( $title ) {
         $this->name = $title . " " . $this->name;
@@ -38,10 +37,9 @@ class Cat extends Animal {
     }
 }
 
-$rajesh = new Human( 'Rajesh' );
-echo $rajesh->greet();
-$rajesh->eat();
+$h1 = new Human( 'Rajesh' );
+echo $h1->greet();
+$h1->run();
 
 $cat1 = new Cat( 'Tom' );
 $cat1->greet();
-$cat1->sleep();

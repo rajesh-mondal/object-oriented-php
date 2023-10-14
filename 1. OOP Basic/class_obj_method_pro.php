@@ -1,10 +1,10 @@
 <?php
-// Class, Object, Method, Property
+/* Class, object, method, property */
 class Human {
     public $name;
     function sayHi() {
         echo "Salam\n";
-        $this->sayName();
+        $this->sayName(); // Call the sayName method of the same class
     }
 
     function sayName() {
@@ -24,17 +24,19 @@ class Dog {
     }
 }
 
+// Create instances of the Human, Cat, and Dog classes
 $h1 = new Human();
 $h2 = new Human();
-$h1->name = "John"; //set
-$h2->name = "Johnson";
+$h1->name = "Rajesh"; // set operation
+$h2->name = "Raju"; // set operation
 $c1 = new Cat();
 $d1 = new Dog();
 
 $h1->sayHi();
 // $h1->sayName();
-// echo $h1->name; //get
+// echo $h1->name; // get operation
+// $c1->sayHi();
 
 $h2->sayHi();
 // $h2->sayName();
-// echo $h2->name; //get
+// echo $h2->name; // get operation
